@@ -37,7 +37,7 @@ jobs:
     
     - name: Install dependencies and build frontend
       run: npm install && npm run build
-      working-directory: front
+      working-directory: front/fitness-app-frontend
       
   build-and-push-docker:
     needs: build-and-test
