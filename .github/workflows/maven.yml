@@ -28,7 +28,7 @@ jobs:
 
     - name: Build and run tests with Maven for backend
       run: mvn clean install -DskipTests
-      working-directory: back/fitnes
+      working-directory: back/fitnes/fitnes
       
     - name: Set up Node.js
       uses: actions/setup-node@v3
