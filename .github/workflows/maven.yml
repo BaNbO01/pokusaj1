@@ -10,7 +10,7 @@ env:
   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
   BACKEND_IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/fitnes-backend
-  FRONTEND_IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}fitnes-frontend
+  FRONTEND_IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/fitnes-frontend
 
 jobs:
   build-and-test:
