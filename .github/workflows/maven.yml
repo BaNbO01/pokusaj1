@@ -9,8 +9,8 @@ on:
 env:
   DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
   DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-  BACKEND_IMAGE_NAME: banbo01/fitnes-backend
-  FRONTEND_IMAGE_NAME: banbo01/fitnes-frontend
+  BACKEND_IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/fitnes-backend
+  FRONTEND_IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}fitnes-frontend
 
 jobs:
   build-and-test:
