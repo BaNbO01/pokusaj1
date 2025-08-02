@@ -1,6 +1,6 @@
 # Prva faza: build-ovanje aplikacije
-# Koristimo sliku koja podrzava Javu 21
-FROM maven:3.9.6-eclipse-temurin-21 AS builder
+# Koristimo Maven sliku baziranu na Javi 21 i Ubuntu Jammy
+FROM maven:3.9.6-eclipse-temurin-21-jammy AS builder
 
 # Postavljanje radnog direktorijuma
 WORKDIR /app
@@ -18,8 +18,8 @@ COPY src ./src
 RUN mvn clean install -DskipTests
 
 # Druga faza: kreiranje finalnog image-a
-# Koristimo JRE sliku koja podrzava Javu 21
-FROM eclipse-temurin:21-jre-focal
+# Koristimo JRE sliku baziranu na Javi 21 i Ubuntu Jammy
+FROM eclipse-temurin:21-jre-jammy
 
 # Kopiranje JAR fajla iz prve faze
 COPY --from=builder /app/target/*.jar app.jar
