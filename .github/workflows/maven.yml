@@ -36,7 +36,7 @@ jobs:
         node-version: '18'
     
     - name: Install dependencies and build frontend
-      run: npm install && npm run build
+      run: npm install
       working-directory: front/fitness-app-frontend
       
   build-and-push-docker:
